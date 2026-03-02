@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Check, Sparkles, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const plans = [
   {
@@ -12,6 +13,7 @@ const plans = [
     icon: null,
     featured: false,
     cta: "Quero testar grátis",
+    planId: "trial",
     features: [
       "Todas as funções liberadas",
       "1 agenda profissional",
@@ -29,6 +31,7 @@ const plans = [
     icon: Sparkles,
     featured: true,
     cta: "Assinar Plano PRO",
+    planId: "pro",
     features: [
       "1 Agenda Profissional",
       "Link Personalizado para Bio",
@@ -46,6 +49,7 @@ const plans = [
     icon: Crown,
     featured: false,
     cta: "Assinar Plano PREMIUM",
+    planId: "premium",
     features: [
       "Agendas ilimitadas para colaboradores",
       "Cálculo Automático de Comissões",
@@ -57,6 +61,8 @@ const plans = [
 ];
 
 const PricingSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="precos" className="relative overflow-hidden bg-hero py-24">
       <div className="pointer-events-none absolute left-1/3 top-1/2 h-96 w-96 rounded-full bg-primary/5 blur-[140px]" />
@@ -128,6 +134,7 @@ const PricingSection = () => {
               </ul>
 
               <Button
+                onClick={() => navigate(`/login?plan=${plan.planId}`)}
                 className={
                   plan.featured
                     ? "w-full shadow-neon"

@@ -1,0 +1,22 @@
+Entendido! Ajustei o prompt para que a Lovable construa a conexão direta entre a sua Página de Vendas e o interior do App. Agora, o prompt inclui a lógica de que o usuário "entra" no app através dos botões de oferta que você já criou.
+
+Aqui está o prompt de 8 parágrafos atualizado e detalhado:
+
+📥 Copie e cole este Prompt na Lovable:
+Contexto: A página de vendas já está pronta. Agora, construa o esqueleto interno do app (Dashboard) focado em barbearias e salões unissex, utilizando React e Tailwind CSS com design minimalista em tons de grafite e off-white.
+
+1. Integração com Botões da Página de Vendas: O sistema deve reconhecer a origem do usuário através dos três botões de oferta da Landing Page: "Teste 7 Dias", "Plano Pro (R$ 29,90)" e "Plano Premium (R$ 49,90)". Ao clicar em qualquer um desses botões, o app deve direcionar o usuário para a tela de cadastro/login inicial, já carregando as permissões e limitações do plano escolhido para que a experiência seja fluida e imediata.
+
+2. Sistema de Login e Acessos Simplificados: Implemente um sistema de acesso baseado em logins pré-definidos para cada nível de oferta, facilitando o gerenciamento inicial. Para o período de teste, utilize o acesso "barber@7dias" com senha "7dias"; para o plano Pro, o acesso "barber@29" com senha "2990"; e para o Premium, o acesso "barber@49" com senha "4990". O app deve identificar qual login foi utilizado e ajustar as funcionalidades disponíveis automaticamente na interface do usuário.
+
+3. O Esqueleto do Dashboard Profissional: Crie uma barra de navegação inferior (Mobile-First) com quatro abas principais: "Agenda", "Clientes", "Serviços" e "Assinatura". O design deve ser limpo, focado em alta legibilidade, com ícones modernos e bordas arredondadas. A tela principal (Agenda) deve abrir por padrão exibindo o cronograma do dia atual de forma vertical e intuitiva para o profissional.
+
+4. Funcionalidade da Agenda e Marcação Manual: Desenvolva a visualização da agenda com slots de horários a cada 30 minutos (das 08:00 às 20:00). Cada slot deve permitir um clique para abrir um modal de "Agendamento Manual", onde o profissional insere o nome do cliente e o serviço. Os horários ocupados devem exibir cards destacados em Roxo Neon para facilitar a visualização rápida dos compromissos do dia.
+
+5. Diferenciação de Funcionalidades por Plano: No código do app, aplique uma trava lógica: usuários do login "barber@29" (Pro) podem gerenciar apenas 1 agenda profissional. Já usuários do login "barber@49" (Premium) devem visualizar uma aba extra ou botão chamado "Gerenciar Equipe", que permite adicionar múltiplos profissionais e visualizar as agendas de cada um separadamente através de um filtro de seleção no topo da tela.
+
+6. Gestão de Serviços e Link da Bio Personalizado: Na aba "Serviços", crie uma interface simples para cadastrar itens com Nome, Preço e Duração (Ex: Corte Degradê, 30 min, R$ 40). Nesta mesma aba, destaque um campo chamado "Meu Link de Agendamento", onde o sistema gera uma URL simulada (ex: app.agendai.com/nome-do-salao). Esse link deve abrir a interface externa de agendamento que o cliente final utilizará.
+
+7. Aba de Clientes e Integração com WhatsApp: Na aba "Clientes", desenvolva uma lista que armazena o Nome e o número de WhatsApp de todos que já realizaram agendamentos. Ao lado de cada nome, coloque um botão com o ícone do WhatsApp que, ao ser clicado, abre automaticamente a conversa no aplicativo de mensagens, facilitando confirmações de última hora ou pós-venda.
+
+8. Interface do Cliente Final (Link Externo): Crie a visualização da página que o cliente verá ao clicar no link da bio do Instagram. Ela deve ser um formulário sequencial ultra-rápido: primeiro a Seleção de Serviço; segundo a Seleção de Profissional (apenas se for Premium); terceiro o Calendário de Horários Livres; e por fim a Confirmação com Nome e WhatsApp, exibindo uma mensagem de sucesso ao concluir.

@@ -1,0 +1,17 @@
+Contexto: Melhore a estrutura e o design do app SaaS para ser uma plataforma Premium Unissex. Use uma estética "Dark & Clean" com fundo Grafite muito escuro, fontes brancas e detalhes em Roxo Neon e Verde Água. O app deve ser dividido em um Dashboard de Gestão e um Customizador de Experiência do Cliente.
+
+1. Dashboard de Visão Geral (Home): A primeira tela após o login deve ser um Dashboard executivo. No topo, exiba cards de resumo: "Ganhos de Hoje (R$)", "Agendamentos Pendentes" e "Taxa de Ocupação". Abaixo, coloque uma lista rápida dos próximos 3 clientes do dia com botões de ação rápida para "Iniciar Atendimento" ou "Cancelar". O design deve usar sombras suaves e bordas arredondadas (estilo glassmorphism).
+
+2. Sistema de Assinatura e Bloqueio: Implemente uma aba de "Assinatura" onde o usuário vê o status do seu plano (7 dias, Pro ou Premium). Se o usuário estiver no plano de 7 dias, exiba um contador regressivo de tempo. Se o plano expirar, cubra o dashboard com um "Paywall" (overlay) elegante que impede o uso e mostra os dois botões de upgrade (R$ 29,90 e R$ 49,90) com checkout simulado.
+
+3. Gestão de Clientes (CRM): A aba "Clientes" deve ser uma tabela moderna com busca em tempo real. Cada linha de cliente deve exibir: Foto de perfil (ou iniciais), Nome, Último Serviço realizado e Gasto Total no salão. Adicione um botão de "Enviar Mensagem" que abre o WhatsApp com um texto pré-definido: "Olá [Nome], notamos que faz tempo que você não nos visita...".
+
+4. O Customizador do Link da Bio (O Diferencial): Crie uma aba chamada "Meu Site". Aqui, o dono do salão deve ter um painel de edição visual (estilo Canva/Linktree). Ele deve poder: 1. Fazer upload da Logo ou Foto do Salão; 2. Escrever uma Bio Curta; 3. Escolher entre 3 temas visuais (Dark, Light ou Minimalist); 4. Adicionar links de redes sociais. O app deve mostrar um "Preview" em tempo real de como o site está ficando.
+
+5. Configuração de Serviços e Catálogo: Dentro do customizador, a seção de "Serviços" deve permitir organizar por categorias (ex: Cabelo, Barba, Unhas). Cada serviço deve permitir adicionar uma foto real do trabalho realizado, descrição curta, preço e tempo. No plano Premium, adicione a opção de "Serviços Combinados" (ex: Cabelo + Barba com desconto).
+
+6. Configuração de Horários e Agenda Inteligente: A aba de horários deve permitir configurar intervalos de almoço e bloqueios recorrentes (ex: fechado toda segunda-feira). A agenda principal deve ter uma visão de "Linha do Tempo" fluida, onde o profissional pode clicar e arrastar para ver todos os horários. Se for Plano Premium, adicione um seletor no topo para alternar entre as agendas de diferentes colaboradores.
+
+7. Interface do Cliente (O Link Final): Desenvolva a página que o cliente final acessa. Ela deve carregar a foto do salão no topo, os serviços com as fotos cadastradas e um fluxo de agendamento visual. O calendário de escolha de datas deve destacar os dias disponíveis e, após a escolha do horário, o cliente deve preencher apenas Nome e WhatsApp para finalizar.
+
+8. Lógica de Confirmação e Checkout de Agendamento: Após o cliente agendar, o app do profissional deve emitir uma notificação sonora e visual no Dashboard. O sistema deve gerar automaticamente um link de "Confirmação de Presença" para ser enviado ao cliente. Se for Plano Premium, habilite uma opção de "Pagamento Antecipado de Sinal" (simulado) para garantir a reserva do horário.
